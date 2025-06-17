@@ -6,6 +6,7 @@ This is a [Next.js](https://nextjs.org) AUTH project
 🚀 Next.js 15 with server actions
 🔑 Credentials Provider
 🌐 OAuth Provider (Social login with Google & GitHub)
+🌐 Prisma
 🔒 Forgot password functionality
 ✉️ Email verification
 📱 Two factor verification (2FA)
