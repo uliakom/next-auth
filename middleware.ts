@@ -17,10 +17,12 @@ export default auth((req) => {
   const isPublicRoutes = publicRoutes.includes(nextUrl.pathname);
   const isAuthRoutes = authRoutes.includes(nextUrl.pathname);
 
+  // Allow every api rout
   if (isApiAuthRoutes) {
     return;
   }
 
+  // Allow auth routs but if logined in redirect to setting or dashboard page
   if (isAuthRoutes) {
     if (isLoggedIn) {
       return Response.redirect(new URL(DEFAULT_LOGIN_REDIRECT, nextUrl));

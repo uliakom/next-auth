@@ -10,7 +10,7 @@ export const publicRoutes = ["/"];
  * @type{string[]}
  */
 
-export const authRoutes = ["/auth/login", "/auth/register"];
+export const authRoutes = ["/login", "/register"];
 
 /**
  * The prefix for APi authentication routs.Routs that start from this prefix are used for API
@@ -25,3 +25,4 @@ export const apiAuthPrefix = "/api/auth"
  */
 
 export const DEFAULT_LOGIN_REDIRECT = "/settings";
+
