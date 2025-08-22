@@ -24,13 +24,15 @@ export const login = async (values: z.infer<typeof LoginSchema>) => {
       redirectTo:DEFAULT_LOGIN_REDIRECT,
     });
 
+    return { error: undefined, success: "You are logged in" };
+    
   } catch (error) {
       if (error instanceof AuthError) {
           switch (error.type) {
               case "CredentialsSignin":
-                  return { error: "Invalid credentials" }
+                  return { error: "Invalid credentials",success: undefined }
               default: 
-                  return {error: "Something went wrong"}
+                  return {error: "Something went wrong",success: undefined}
           }
       }
       throw error;
