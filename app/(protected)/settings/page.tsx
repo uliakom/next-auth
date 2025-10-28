@@ -9,6 +9,7 @@ const SettingsPage = async () => {
       {/* {JSON.stringify(session)} */}
       <p>Name: {session?.user?.name}</p>
       <p>Email: {session?.user?.email}</p>
+      <p>Role: {session?.user?.role}</p>
       <p>Settings Page</p>
       <form action={async () => {
         "use server";
